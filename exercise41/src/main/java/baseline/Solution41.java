@@ -9,10 +9,8 @@ import java.io.File;
 public class Solution41 {
     public static void main(String[] args) {
         NameSorter ns = new NameSorter();
-        File input = new File("exercise41_input.txt");
-        File output = new File("exercise41_output.txt");
-        ns.readNames(input);
+        ns.readNames("data/exercise41_input.txt");
         ns.sortNames();
-        ns.printNamesToFile(output);
+        ns.printNamesToFile("data/exercise41_output.txt");
     }
 }
