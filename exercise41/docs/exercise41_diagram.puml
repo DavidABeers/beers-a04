@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+
+class Solution41 {
+NameSorter ns
+main(String[])
+}
+' these are all in the same class because otherwise there would be a class with only one method
+class NameSorter{
+ArrayList names
+readNames()
+sortNames()
+writeNamesToFile()
+}
+Solution41 -- NameSorter
+
+@enduml
