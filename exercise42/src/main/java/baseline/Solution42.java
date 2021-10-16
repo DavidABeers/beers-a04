@@ -7,7 +7,7 @@ package baseline;
 public class Solution42 {
     public static void main(String[] args) {
         ParsedDataPrinter fp = new ParsedDataPrinter();
-        fp.readData("exercise42_input.txt");
+        fp.readData("data/exercise42_input.txt");
         fp.mapData();
         fp.printTabularData();
     }

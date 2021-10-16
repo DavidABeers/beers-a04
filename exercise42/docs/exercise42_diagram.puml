@@ -10,6 +10,7 @@ class FileParser{
 +getData()
 +getMappedData()
 +readData()
+-getNextCommaPos()
 +mapData()
 }
 class ParsedDataPrinter{
