@@ -1,0 +1,14 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class Solution43{
++main()
+}
+class SiteMaker{
++getPromptedUserInput()
+-generateFolder()
+-generateHTML()
++generateSite()
+}
+Solution43 -- SiteMaker
+@enduml
