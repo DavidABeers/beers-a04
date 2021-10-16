@@ -69,6 +69,7 @@ public class NameSorter {
                 // this resource is closed, SonarLint is just being dumb
                 writer = new FileWriter("data/exercise41_output.txt");
             }
+            writer.write("Total of " + names.size() + " names\n-----------------\n");
             // for names
             for(String name : names){
                 // print names to file
