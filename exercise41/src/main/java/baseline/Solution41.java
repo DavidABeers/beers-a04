@@ -11,6 +11,6 @@ public class Solution41 {
         NameSorter ns = new NameSorter();
         ns.readNames("data/exercise41_input.txt");
         ns.sortNames();
-        ns.printNamesToFile("data/exercise41_output.txt");
+        ns.printNamesToFile();
     }
 }

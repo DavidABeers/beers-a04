@@ -62,7 +62,7 @@ class NameSorterTest {
         expected.add("Swift, Geoffrey");
         expected.add("Xiong, Fong");
         ns.readNames("data/exercise41_input.txt");
-        ns.printNamesToFile("data/exercise41_output.txt");
+        ns.printNamesToFile();
         ns.readNames("data/exercise41_output.txt");
         List<String> actual = ns.getList();
         for(int i = 0; i<expected.size();i++){

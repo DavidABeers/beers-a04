@@ -57,10 +57,18 @@ public class NameSorter {
     }
 
     // prints all strings in names to the output file
-    public void printNamesToFile(String filepath){
+    public void printNamesToFile(){
         try {
-            // this resource is closed, SonarLint is just being dumb
-            FileWriter writer = new FileWriter(filepath);
+            File output = new File("data/exercise41_output.txt");
+            FileWriter writer = null;
+            if(output.createNewFile()){
+                // this resource is closed, SonarLint is just being dumb
+                writer = new FileWriter(output.getPath());
+            }
+            else{
+                // this resource is closed, SonarLint is just being dumb
+                writer = new FileWriter("data/exercise41_output.txt");
+            }
             // for names
             for(String name : names){
                 // print names to file
