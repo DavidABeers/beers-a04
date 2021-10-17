@@ -7,6 +7,7 @@ package basline;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -17,7 +18,7 @@ class FrequencyCheckerTest {
         FrequencyChecker fc = new FrequencyChecker();
         fc.getInput();
         int[] expected = {7, 2, 1};
-        ArrayList<Integer> actual = fc.getFrequency();
+        List<Integer> actual = fc.getFrequency();
         for(int i  =0;i<expected.length;i++){
             assertEquals(expected[i], actual.get(i));
         }

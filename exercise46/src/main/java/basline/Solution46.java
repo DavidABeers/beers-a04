@@ -5,4 +5,9 @@
 package basline;
 
 public class Solution46 {
+    public static void main(String[] args) {
+        FrequencyChecker fc = new FrequencyChecker();
+        fc.getInput();
+        fc.printHistogram();
+    }
 }
