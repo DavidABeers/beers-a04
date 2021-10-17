@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class Solution45{
++main
+}
+' these are all in one class to make it easier for the user
+' and a class just for the output seems excessive
+class WordReplacer{
+-ArrayList<String> inputStrings
+-readInput()
++replaceInstancesOf(String, String)
++makeOutputFile()
+}
+Solution45 -- WordReplacer
+@enduml
