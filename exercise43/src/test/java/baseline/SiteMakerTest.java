@@ -2,14 +2,13 @@ package baseline;
 
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
-
-import static org.junit.jupiter.api.Assertions.*;
-
 class SiteMakerTest {
 
     @Test
     void testGenerateSite() {
-
+        SiteMaker sm = new SiteMaker();
+        sm.generateSite();
+        // so I just realized that I can't test this since it requires uses input.
+        // Oh well.
     }
 }
