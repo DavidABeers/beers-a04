@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class Solution46{
++main
+}
+' these are all in one class because a separate class would only have one method
+class FrequencyChecker{
+-ArrayList<String> words
+-ArrayList<Integer> frequency
++getFrequency()
++getInput()
++printHistogram()
+}
+Solution46 -- FrequencyChecker
+@enduml
