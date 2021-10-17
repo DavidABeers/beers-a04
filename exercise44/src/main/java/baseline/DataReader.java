@@ -2,41 +2,58 @@ package baseline;
 
 import com.google.gson.Gson;
 
+import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class DataReader {
-    // stores the data from the input file in a list
-    // might have to change this to a list of product objects, not sure
-    List<Map<?, ?>> data = new ArrayList<>();
+    // stores the data from the input file in an object
+    Products products;
 
     // returns what the user searches for
     public String getUserQuery(){
         // open scanner
+        Scanner in = new Scanner(System.in);
         // prompt for a query
+        System.out.println("What is the Product name? ");
         // return query
+        return in.next();
     }
 
     // get data from the JSON file
     private void jsonToList(){
-        Gson input = new Gson();
         // make a reader
-        Reader inputReader = Files.newBufferedReader(Paths.get("data/exercise44_input.json"));
-        // convert the input.json to maps
-        // add maps to list
+        try {
+            Reader inputReader = Files.newBufferedReader(Paths.get("data/exercise44_input.json"));
+            // convert the input.json to object
+            products = new Gson().fromJson(inputReader, Products.class);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     // searches the list for a value with the key "name" matching the query
     public void printQueryResults(){
+        this.jsonToList();
         boolean queryNotFound = true;
         // while queryNotFound
-        String query = this.getUserQuery();
-        // for maps in data
-        // if key = name and value is query,
-            // print values related to that name
-            // queryNotFound = false;
+        while(queryNotFound){
+            String query = this.getUserQuery();
+            // for maps in data
+            for(Product item : products.getProducts()){
+                // if key name value is query,
+                if(item.getName().equals(query)){
+                    // print values related to that name
+                    System.out.println("Name: "+ item.getName() + "\nPrice: " + item.getPrice() + "\nQuantity: "+ item.getQuantity());
+                    // set queryNotFound to false
+                    queryNotFound = false;
+                    break;
+                }
+            }
+            if(queryNotFound){
+                System.out.println("Sorry, that product was not found in our inventory.");
+            }
+        }
     }
 }

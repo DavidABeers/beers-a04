@@ -10,5 +10,22 @@ class DataReader{
 -jsonToList()
 +printQueryResults()
 }
+class Products{
+-Product[] products
++getProducts()
++setProducts()
+}
+class Product{
+-String name
+-float price
+-short quantity
++getName()
++getPrice()
++getQuantity()
+}
+
+
 Solution44 -- DataReader
+Product <|-- Products
+Products <|-- DataReader
 @enduml
