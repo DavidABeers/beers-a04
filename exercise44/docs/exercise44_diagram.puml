@@ -1,0 +1,14 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class Solution44{
++main()
+}
+class DataReader{
+-List<Map<?,?> data
++getUserQuery()
+-jsonToList()
++printQueryResults()
+}
+Solution44 -- DataReader
+@enduml
